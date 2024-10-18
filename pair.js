@@ -62,6 +62,26 @@ router.get('/', async (req, res) => {
                         const dt = await PrabathPairWeb.sendMessage(user_jid, {
                             text: sid
                         });
+                        
+                        let GIFTED_MD_TEXT = `
+┏━━━━━━━━━━━━━━
+┃SILENT-SOBX-MD SESSION IS 
+┃SUCCESSFULLY
+┃CONNECTED ✅🔥
+┗━━━━━━━━━━━━━━━
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+❶ || Creator = 𖥘 SILENTLOVER432 𖥘
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+❷ || WhattsApp Channel = https://whatsapp.com/channel/0029VaHO5B0G3R3cWkZN970s
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+Please Follow My Support Channel
+Wanna talk to me?👉 wa.me/+923096287432👈
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+©*2024-2099 SILENT LOVER*
+
+_Don't Forget To Give Star To My Repo_`
+ await PrabathPairWeb.sendMessage(PrabathPairWeb.user.id,{text:GIFTED_MD_TEXT},{quoted:session})
+ 
 
                     } catch (e) {
                         exec('pm2 restart prabath');
