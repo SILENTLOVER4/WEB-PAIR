@@ -72,7 +72,6 @@ router.get('/', async (req, res) => {
                         const dt = await PrabathPairWeb.sendMessage(user_jid, {
                             text: sid
                         });
-                        
 
                     } catch (e) {
                         exec('pm2 restart prabath');
